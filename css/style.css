@@ -30,10 +30,11 @@
 
 :root{
 	/* colors */
-	--dark-purple:  #24053E;
-	--eucaplyptus: #44FFA1;
-	--davys-grey: #584D62;
-	--ghost-white: #FCF8FF;
+	--dark-purple: #24053e;
+	--eucaplyptus: #44ffa1;
+	--davys-grey: #584d62;
+	--ghost-white: #fcf8ff;
+	--white-color: #fff;
 
 	/* fonts */
 	--heading-font-family: "Fraunces 144pt", "Times New Roman", serif;
