@@ -109,3 +109,12 @@ html {
 	clip: rect(0 0 0 0);
 	overflow: hidden;
  }
+
+/* CONTAINER */
+
+.container{
+	width: 100%;
+	max-width: 1146px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
