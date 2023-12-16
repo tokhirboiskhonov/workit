@@ -224,13 +224,25 @@ img {
 	opacity: 0.6;
 }
 
-.socials {
+.site-header-hero-wrapper {
+	position: relative;
+	z-index: 1;
+	padding-top: 56px;
+	padding-bottom: 255px;
+	background-color: var(--dark-purple);
 }
 
-
-.site-header-hero-wrapper {
-	padding-top: 56px;
-	background-color: var(--dark-purple);
+.site-header-hero-wrapper::after{
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	height: 68px;
+	content: "";
+	background-image: url("../img/hero-purple-addon.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 /* SITE HEADER */
@@ -264,11 +276,11 @@ img {
 }
 
 .hero__img{
-	display: block;
-}
-
-.hero__button {
-	margin-bottom: 50px;
+	position: absolute;
+	z-index: 2;
+	bottom: -220px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .features {
@@ -458,7 +470,23 @@ only screen and (                min-resolution: 2dppx) {
 
 }
 
+@media only screen and (max-width: 1200px){
+	.hero__img{
+		width: 630px;
+		bottom: -25%;
+	}
+}
+
 @media only screen and (max-width: 1024px){
+
+	.site-header-hero-wrapper{
+		padding-bottom: 230px;
+	}
+
+	.hero__img{
+		width: 580px;
+	}
+
 	.features{
 		padding-top: 200px;
 		padding-bottom: 100px;
@@ -548,6 +576,12 @@ only screen and (                min-resolution: 2dppx) {
 @media only screen and (max-width: 768px){
 	.site-header-hero-wrapper{
 		padding-top: 36px;
+		padding-bottom: 170px;
+	}
+
+	.site-header-hero-wrapper::after{
+		height: 36px;
+		bottom: -176px;
 	}
 
 	.site-header__container{
@@ -559,6 +593,10 @@ only screen and (                min-resolution: 2dppx) {
 		margin-bottom: 40px;
 		font-size: 60px;
 		line-height: 1;
+	}
+
+	.hero__img{
+		width: 480px;
 	}
 
 	.test-cta__inner{
@@ -608,6 +646,14 @@ only screen and (                min-resolution: 2dppx) {
 		padding: 0 16px;
 	}
 
+	.site-header-hero-wrapper{
+		padding-bottom: 140px;
+	}
+
+	.site-header-hero-wrapper::after{
+		height: 18px;
+	}
+
 	.site-header__container{
 		margin-bottom: 64px;
 	}
@@ -618,8 +664,9 @@ only screen and (                min-resolution: 2dppx) {
 		line-height: 1;
 	}
 
-	.hero__button{
-		margin-bottom: 60px;
+	.hero__img{
+		width: 320px;
+		bottom: -110px;
 	}
 
 	.features {
@@ -651,6 +698,12 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media only screen and (max-width: 350px){
+
+	.hero__img{
+		width: 90%;
+		bottom: -15%;
+	}
+
 	.test-cta__img{
 		width: 250px;
 		height: 250px;
