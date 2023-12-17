@@ -224,9 +224,33 @@ img {
 	opacity: 0.6;
 }
 
+/* SECTION-ROUNDED-BOTTOM */
+
+.section-rounded-bottom::after{
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	height: 68px;
+	content: "";
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.section-rounded-bottom--site-header-hero-wrapper::after{
+	background-image: url("../img/hero-purple-addon.svg");
+}
+
+.section-rounded-bottom--features::after{
+	background-image: url("../img/features-ghost-white-addon.svg");
+}
+
+/* SITE-HEADER-HERO-WRAPPER */
+
 .site-header-hero-wrapper {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	padding-top: 56px;
 	padding-bottom: 255px;
 	background-color: var(--dark-purple);
@@ -235,34 +259,7 @@ img {
 	background-position: calc(50% - 689px) 116px, calc(50% + 680px) 313px;
 }
 
-/* .site-header-hero-wrapper__circles1{
-	position: absolute;
-	z-index: 1px;
-	top: 167px;
-	left: calc(50% - 820px);
-	transform: rotate(-152deg);
-}
 
-.site-header-hero-wrapper__circles2{
-	position: absolute;
-	z-index: 1px;
-	top: 348px;
-	left: calc(50% + 610px);
-	transform: rotate(-56deg);
-} */
-
-.site-header-hero-wrapper::after{
-	position: absolute;
-	z-index: 1;
-	left: 0;
-	top: 100%;
-	width: 100%;
-	height: 68px;
-	content: "";
-	background-image: url("../img/hero-purple-addon.svg");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
 
 /* SITE HEADER */
 
@@ -305,7 +302,9 @@ img {
 .features {
 	position: relative;
 	z-index: 1;
-background-color: var(--ghost-white);
+	padding-top: 327px;
+	padding-bottom: 103px;
+	background-color: var(--ghost-white);
 }
 
 .features__list {
@@ -613,16 +612,17 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media only screen and (max-width: 768px){
+
+	.section-rounded-bottom::after{
+		height: 36px;
+	}
+
 	.site-header-hero-wrapper{
 		padding-top: 36px;
 		padding-bottom: 170px;
 		background-position: calc(50% - 104%) 116px, calc(50% + 68%) 313px;
 	}
 
-	.site-header-hero-wrapper::after{
-		height: 36px;
-		bottom: -176px;
-	}
 
 	.site-header__container{
 		margin-bottom: 60px;
