@@ -230,7 +230,26 @@ img {
 	padding-top: 56px;
 	padding-bottom: 255px;
 	background-color: var(--dark-purple);
+	background-image: url("../img/bg-pattern-1.svg"), url("../img/bg-pattern-2.svg");
+	background-repeat: no-repeat;
+	background-position: calc(50% - 689px) 116px, calc(50% + 680px) 313px;
 }
+
+/* .site-header-hero-wrapper__circles1{
+	position: absolute;
+	z-index: 1px;
+	top: 167px;
+	left: calc(50% - 820px);
+	transform: rotate(-152deg);
+}
+
+.site-header-hero-wrapper__circles2{
+	position: absolute;
+	z-index: 1px;
+	top: 348px;
+	left: calc(50% + 610px);
+	transform: rotate(-56deg);
+} */
 
 .site-header-hero-wrapper::after{
 	position: absolute;
@@ -470,7 +489,14 @@ only screen and (                min-resolution: 2dppx) {
 
 }
 
+@media only screen and (max-width: 1300px){
+	.site-header-hero-wrapper{
+		background-position: calc(50% - 60%) 116px, calc(50% + 54%) 313px;
+	}
+}
+
 @media only screen and (max-width: 1200px){
+
 	.hero__img{
 		width: 630px;
 		bottom: -25%;
@@ -481,6 +507,7 @@ only screen and (                min-resolution: 2dppx) {
 
 	.site-header-hero-wrapper{
 		padding-bottom: 230px;
+		background-position: calc(50% - 80%) 116px, calc(50% + 60%) 313px;
 	}
 
 	.hero__img{
@@ -542,6 +569,12 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media only screen and (max-width: 900px){
+	.site-header-hero-wrapper{
+		padding-bottom: 230px;
+		background-position: calc(50% - 85%) 116px, calc(50% + 60%) 313px;
+	}
+
+
 	.test-cta{
 		padding-top: 250px;
 		padding-bottom: 40px;
@@ -573,10 +606,17 @@ only screen and (                min-resolution: 2dppx) {
 	}
 }
 
+@media only screen and (max-width: 790px){
+	.site-header-hero-wrapper{
+		background-position: calc(50% - 102%) 116px, calc(50% + 62%) 313px;
+	}
+}
+
 @media only screen and (max-width: 768px){
 	.site-header-hero-wrapper{
 		padding-top: 36px;
 		padding-bottom: 170px;
+		background-position: calc(50% - 104%) 116px, calc(50% + 68%) 313px;
 	}
 
 	.site-header-hero-wrapper::after{
@@ -610,6 +650,10 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media only screen and (max-width: 700px){
+	.site-header-hero-wrapper{
+		background-image: none;
+	}
+
 	.test-cta {
 		padding-top: 328px;
 		padding-bottom: 54px;
@@ -640,6 +684,7 @@ only screen and (                min-resolution: 2dppx) {
 		line-height: 48px;
 	}
 }
+
 
 @media only screen and (max-width: 500px){
 	.container{
