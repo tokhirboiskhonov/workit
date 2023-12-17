@@ -303,8 +303,8 @@ img {
 }
 
 .features {
-padding-top: 255px;
-padding-bottom: 170px;
+	position: relative;
+	z-index: 1;
 background-color: var(--ghost-white);
 }
 
