@@ -364,7 +364,7 @@ img {
 /* TEST-CTA */
 
 .test-cta {
-	padding-top: 285px;
+	padding-top: 350px;
 	padding-bottom: 60px;
 }
 
@@ -575,7 +575,7 @@ only screen and (                min-resolution: 2dppx) {
 
 
 	.test-cta{
-		padding-top: 250px;
+		padding-top: 290px;
 		padding-bottom: 40px;
 	}
 
@@ -739,6 +739,10 @@ only screen and (                min-resolution: 2dppx) {
 
 	.feature__inner {
 		text-align: center;
+	}
+
+	.test-cta {
+		padding-top: 350px;
 	}
 
 	.site-footer {
